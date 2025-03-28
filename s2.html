@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Регистрация</title>
+    <title>&#128760;</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,109 +12,127 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
             background-color: #f4f4f4;
         }
-        .container {
-            max-width: 800px;
+
+        header {
+            background-color: #333;
+            color: white;
             width: 100%;
-            padding: 20px;
-            background-color: #fff;
-            margin: 20px;
-            border-radius: 8px;
+            padding: 10px 0;
+            position: relative;
+            display: flex;
+            justify-content: center;
         }
-        .menu {
-            margin-bottom: 20px;
-            list-style-type: none;
-            padding: 0;
+
+        .back-button {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
         }
-        .menu-item {
-            display: inline;
-            margin-right: 20px;
+
+        h1 {
+            margin: 0;
         }
-        .menu-item a {
-            text-decoration: none;
-            color: #ff5733;
-            font-weight: bold;
-        }
-        .menu-item a:hover {
-            text-decoration: underline;
-        }
+
         .content {
-            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            margin: 20px;
+            background-color: #e9f5ff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+			border-radius: 15px;
+        }
+
+        .text {
             font-size: 18px;
             margin: 20px 0;
         }
+
+        .image-container {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin-right: 20px;
+        }
+
+        .footer {
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
         .footnote {
             font-size: 14px;
-            color: #007bff;
+            margin-left: 5px;
             cursor: pointer;
-            text-decoration: underline;
+            color: blue;
         }
-        .table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        .table img {
-            max-width: 100px;
-            height: auto;
-            margin-right: 10px;
-        }
-        .table td {
-            padding: 10px;
-            vertical-align: top;
-        }
-        .footer {
-            margin-top: 30px;
-            font-size: 14px;
-            text-align: center;
-            color: #667;
-        }
-		a {
-		color: #c70039;
-		}
-		
-        .footnote-description {
+
+        .additional-info {
+            display: none;
             margin-top: 10px;
-            font-size: 14px;
-            color: #667;
+            font-size: 16px;
+            color: #555;
+        }
+
+        @media (max-width: 600px) {
+            .image-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .image-container img {
+                margin-right: 0;
+                margin-bottom: 10px;
+            }
         }
     </style>
+    <script>
+        function toggleInfo() {
+            const info = document.getElementById('additional-info');
+            info.style.display = info.style.display === 'none' || info.style.display === '' ? 'block' : 'none';
+        }
+    </script>
 </head>
 <body>
 
-    <div class="container">
-        <ul class="menu">
-            <li class="menu-item"><a href="index.html">вернуться на главную</a></li>
-            
-        </ul>
-        
-        <div class="content">
-            Для регистрации совершите перевод согласно выбранного тарифа на номер.<sup class="footnote" onclick="document.getElementById('footnote-description').style.display='block';">*</sup>
-        </div>
-        
-        <table class="table">
-            <tr>
-                <td><img src="bitaddres.jpg" alt="QR-код"></td>
-                <td>19Xo3yB4ZfFqejP4TxYPMPrkt5GWunNad2</td>
-            </tr>
-        </table>
+<header>
+    <a href="index.html" class="back-button">Вернуться</a>
+    <h1>&#128760;</h1>
+</header>
 
-        <!-- Новый абзац текста -->
-        <div class="content">
-           Отправьте номер кошелька, с которого осуществлялся перевод, на адрес указанный ниже.
-		   В целях вашей безопасности и конфиденциальности всю дополнительную информацию, а так же дату и место мероприятия мы сообщим персонально после подтверждения регистрации.
-		   Спасибо за понимание!
-        </div>
-        
-        <div class="footer">
-            подтвердить регистрацию: <a href="mailto:nibiru@gmail.com">nibiru@gmail.com</a>
-        </div>
-
-        <div id="footnote-description" class="footnote-description" style="display:none;">
-            <strong>* </strong> Класс обслуживания можно изменить по согласованию позже.
-        </div>
+<div class="content">
+    <p class="text">Для регистрации совершите перевод согласно выбранного тарифа на номер.<span class="footnote" onclick="toggleInfo()">★</span></p>
+    <div id="additional-info" class="additional-info">
+        Класс обслуживания можно изменить по согласованию позже.
     </div>
+
+    <div class="image-container">
+        <img src="bitaddres.jpg" alt="QR - код">
+        <p>19Xo3yB4ZfFqejP4TxYPMPrkt5GWunNad2</p>
+    </div>
+
+    <p class="text">Отправьте номер кошелька, с которого осуществлялся перевод, на адрес указанный ниже.
+		   В целях вашей безопасности и конфиденциальности всю дополнительную информацию, а так же дату и место мероприятия мы сообщим персонально после подтверждения регистрации.
+		   Спасибо за понимание!.</p>
+</div>
+
+<div class="footer">
+    <p>подтвердить регистрацию: <a href="mailto:nibiru@gmail.com" style="color: blue; text-decoration: none;">nibiru@gmail.com</a></p>
+</div>
 
 </body>
 </html>
